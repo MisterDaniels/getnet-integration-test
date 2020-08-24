@@ -5,7 +5,9 @@ const { celebrate, Joi, errors, Segments } = require('celebrate');
 const UserController = require('./controllers/UserController');
 
 router.get('/', (req, res) => {
-    res.render('index');
+    res.json({
+        message: 'Hello World, because, why not'
+    });
 });
 
 router.post('/user', celebrate({
